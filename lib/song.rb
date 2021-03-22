@@ -14,7 +14,11 @@ class Song
     song
   end
  def self.all
+   @@all #returns all existing Song instances
  end
- def artists_name=()
+ 
+ def artists_name=(artist)
+   @artist_name = artist
  end
+ 
 end
