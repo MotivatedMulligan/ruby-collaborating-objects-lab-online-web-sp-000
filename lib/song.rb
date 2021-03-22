@@ -13,7 +13,7 @@ end
 #########
 def artist=(artist)
     @artist = artist
-    artist.song << self
+    artist.songs << self
 end
 
   def self.new_by_filename(filename)
