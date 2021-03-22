@@ -23,23 +23,12 @@ end
     artist.add_song(song)
     song
   end
-#########
+
  def artist_name=(name)
-  #if
-  # self.artist = Artist.find_or_create_by_name(name)
   artist =
   Artist.find_or_create_by_name(name)
   self.artist = artist
   artist.add_song(self)
 
-  #self.each.detect {|artist| artist.name == name } || Artist.new(name)
-
-   #nil
-  #else
-  # artist
-   #accepts artist's name, finds/creates
-   #Artist instance and assigns to
-   #Song's artist attribute
-  #end
  end
 end
