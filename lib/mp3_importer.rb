@@ -7,7 +7,7 @@ class MP3Importer
   end
   ##########
   def files
-    Dir.entries(self.path)#[2..5]
+    Dir.entries(self.path)[2..5]
   #!  @files = Dir.entries(path)
 #!  @files.delete_if {|file| file == "." || file = ".."}
 #loads all the mp3 files in the path directory
