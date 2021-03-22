@@ -7,7 +7,7 @@ class Song
   end
 
 def artist=
-    song.artist = self
+    artist.song = self
 end
 def self.all
   @@all
