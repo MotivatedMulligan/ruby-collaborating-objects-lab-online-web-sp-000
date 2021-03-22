@@ -14,8 +14,8 @@ class Artist
   end
   def songs
     @songs
-    Song.all.select {|song| song.artist}
-    song.artist == artist
+    #Song.all.select {|song| song.artist}
+    #song.artist == artist
   end
   def print_songs
     @songs.each {|song| puts song.name}
