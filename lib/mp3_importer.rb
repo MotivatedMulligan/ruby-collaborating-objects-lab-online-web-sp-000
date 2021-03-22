@@ -21,5 +21,5 @@ class MP3Importer
     #imports files into
     #library by creating songs from a filename
   end
-
+end
 end
