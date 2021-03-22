@@ -7,7 +7,7 @@ class Song
   end
 
 def artist=
-    song.artist = self
+    song.artist 
 end
 def self.all
   @@all
@@ -24,13 +24,15 @@ def self.all
   end
 
  def artists_name=(artist)
-if
+  if
    artist.name = artist
    nil
- else
+  else
    artist
    #accepts artist's name, finds/creates
    #Artist instance and assigns to
    #Song's artist attribute
+  end
  end
+end
 end
