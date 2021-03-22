@@ -11,6 +11,7 @@ def artist=
 end
 def self.all
   @@all
+end
 #########
   def self.new_by_filename(filename)
     split_name = filename.split(" - ")
@@ -35,4 +36,4 @@ def self.all
   end
  end
 end
-end
+
