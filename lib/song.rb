@@ -27,7 +27,7 @@ end
  def artist_name=(artist)
   #if
   # self.artist = Artist.find_or_create_by_name(name)
-   self.detect {|artist| artist.name == name } || Artist.new(name)
+   self.each {|artist| artist.name == name } || Artist.new(name)
 
    #nil
   #else
