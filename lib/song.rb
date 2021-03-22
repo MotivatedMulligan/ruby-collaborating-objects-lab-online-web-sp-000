@@ -29,7 +29,8 @@ end
   # self.artist = Artist.find_or_create_by_name(name)
   artist =
   Artist.find_or_create_by_name(name)
-  self.artist = artistartist.add_song(self)
+  self.artist = artist
+  artist.add_song(self)
 
   #self.each.detect {|artist| artist.name == name } || Artist.new(name)
 
