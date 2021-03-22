@@ -34,4 +34,3 @@ if
    #Song's artist attribute
  end
 end
-
