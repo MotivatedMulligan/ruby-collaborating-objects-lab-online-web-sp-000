@@ -9,6 +9,8 @@ class Song
 def artist=
     song.artist = artist
 end
+def self.all
+  @@all
 #########
   def self.new_by_filename(filename)
     split_name = filename.split(" - ")
@@ -21,15 +23,15 @@ end
     #artist from the filename
   end
 
- def self.all
-   @@all #returns all existing Song instances
- end
-
  def artists_name=(artist)
-   @artist_name = artist
+if
+   artist.name = artist
+   nil
+ else
+   artist
    #accepts artist's name, finds/creates
    #Artist instance and assigns to
    #Song's artist attribute
  end
-
+end
 end
