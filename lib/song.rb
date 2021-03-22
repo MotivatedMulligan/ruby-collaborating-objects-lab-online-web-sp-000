@@ -1,6 +1,6 @@
 class Song
   attr_accessor :name, :artist
-@@all = []
+  @@all = []
   def initialize(name)
     @name = name
     @@all << self
@@ -24,7 +24,7 @@ end
     song
   end
 #########
- def artist_name=(artist)
+ def artist_name=(name)
   #if
   # self.artist = Artist.find_or_create_by_name(name)
    Artist.all.detect {|artist| artist.name == name } || Artist.new(name)
