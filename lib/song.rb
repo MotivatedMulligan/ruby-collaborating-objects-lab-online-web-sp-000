@@ -24,7 +24,7 @@ end
     song
   end
 #########
- def artist_name=(artist)
+ def artist_name=(name)
   #if
   # self.artist = Artist.find_or_create_by_name(name)
   artist =
