@@ -3,11 +3,15 @@ class MP3Importer
 
   def initialize(path)
     @path = path
-  #  @library = []
   end
+  def import
+    files.each do |filename| Song.new_by_filename(filename)
+  end
+end
   ##########
   def files
-    Dir.entries(self.path)[2..5]
+  @files = Dir.entries(@path)#(self.path)[2..5]
+  @files.delete_if {|file| file == "." || file == ".."}
   #!  @files = Dir.entries(path)
 #!  @files.delete_if {|file| file == "." || file = ".."}
 #loads all the mp3 files in the path directory
@@ -15,11 +19,4 @@ class MP3Importer
 #filename with no path
   end
 
-  def import
-    #! @library << files
-    files.each do |filename| Song.new_by_filename(filename)
-    #imports files into
-    #library by creating songs from a filename
-  end
-end
 end
