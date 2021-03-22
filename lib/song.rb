@@ -4,16 +4,18 @@ class Song
   def initialize(name)
     @name = name
     @@all << self
+    @artist = artist
   end
 
-def artist=(artist)
-    @artist = artist
-    artist.song << self
-end
 def self.all
   @@all
 end
 #########
+def artist=(artist)
+    @artist = artist
+    artist.song << self
+end
+
   def self.new_by_filename(filename)
     split_name = filename.split(" - ")
     song = self.new(split_name[1])
@@ -26,14 +28,14 @@ end
   end
 
  def artists_name=(artist)
-  if
-   artist.name = artist
-   nil
-  else
-   artist
+  #if
+   artist.name = Artist.find_or_create_by_name(name)
+   #nil
+  #else
+  # artist
    #accepts artist's name, finds/creates
    #Artist instance and assigns to
    #Song's artist attribute
-  end
- end
+  #end
+ #end
 end
