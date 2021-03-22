@@ -27,7 +27,7 @@ end
     #artist from the filename
   end
 
- def artists_name=(artist)
+ def artist_name=(artist)
   #if
    artist.name = Artist.find_or_create_by_name(name)
    #nil
