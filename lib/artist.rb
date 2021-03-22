@@ -25,9 +25,9 @@ class Artist
   end
   #################
   def self.find_or_create_by_name(name)
-    self.all.detect {|artist| cartist.name == name } || Artist.new(name)
+    self.all.detect {|artist| artist.name == name } || Artist.new(name)
 #finds/creates artist by name maintaining
 #uniqueness of objects by name property
-self
+
   end
 end
