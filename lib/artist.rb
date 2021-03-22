@@ -28,6 +28,6 @@ class Artist
     self.all.detect {|artist| cartist.name == name } || Artist.new(name)
 #finds/creates artist by name maintaining
 #uniqueness of objects by name property
-
+self
   end
 end
